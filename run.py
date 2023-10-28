@@ -1,5 +1,4 @@
-import process
-import search
+import process, search
 
 # Gets the input array of coordinates and type
 inputArray = process.convert_input_text('example_maze_input.txt')
