@@ -1,53 +1,42 @@
 import PIL.Image
 
-def to_grayscale(image):
+ASCII_CHARS = ["o", "o", "o", "o", "o", "o", "o", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+def resize(image, new_width = 100):
+    old_width, old_height = image.size
+    new_height = new_width * old_height / old_width
+    return image.resize((new_width, int(new_height)))
+
+def to_greyscale(image):
     return image.convert("L")
 
-# Function to resize the image
-def resize_image(image, width, height):
-    return image.resize((width, height))
-
-# Function to convert an image to ASCII art
-def image_to_ascii(image, scale_factor=1.0):
-    ascii_chars = "@%#*+=-:. "
+def pixel_to_ascii(image):
+    pixels = image.getdata()
     ascii_str = ""
-    
-    image = resize_image(image, int(image.width * scale_factor), int(image.height * scale_factor))
-    
-    for pixel_value in image.getdata():
-        ascii_str += ascii_chars[pixel_value // 25]
-        if len(ascii_str) == image.width:
-            ascii_str += '\n'
-    
+    for pixel in pixels:
+        ascii_str += ASCII_CHARS[pixel//25]
     return ascii_str
 
-# Main function to convert a PDF image to ASCII art
-def pdf_image_to_ascii(pdf_file_path, page_number, scale_factor=0.5):
+def main():
+    path = input("Enter the path to the image field : \n")
     try:
-        pdf_file = PyPDF2.PdfFileReader(open(pdf_file_path, 'rb'))
-        page = pdf_file.getPage(page_number)
-        xObject = page['/Resources']['/XObject'].get_object()
-        image = xObject.get_object()
-        
-        if image['/ColorSpace'] is not None:
-            if image['/ColorSpace'] == '/DeviceRGB':
-                image = to_grayscale(image)
-            
-            ascii_art = image_to_ascii(image, scale_factor)
-            return ascii_art
-        else:
-            return "Image doesn't have a recognized color space."
-    except Exception as e:
-        return str(e)
+        image = PIL.Image.open(path)
+    except:
+        print(path, "Unable to find image ")
+    #resize image
+    image = resize(image)
+    #convert image to greyscale image
+    greyscale_image = to_greyscale(image)
+    # convert greyscale image to ascii characters
+    ascii_str = pixel_to_ascii(greyscale_image)
+    img_width = greyscale_image.width
+    ascii_str_len = len(ascii_str)
+    ascii_img=""
+    #Split the string based on width  of the image
+    for i in range(0, ascii_str_len, img_width):
+        ascii_img += ascii_str[i:i+img_width] + "\n"
+    #save the string to a file
+    with open("ascii_image.txt", "w") as f:
+        f.write(ascii_img)
+main()
 
-# Example usage
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python pdf_image_to_ascii.py <pdf_file_path> <page_number>")
-        sys.exit(1)
-    
-    pdf_file_path = sys.argv[1]
-    page_number = int(sys.argv[2])
-    
-    ascii_art = pdf_image_to_ascii(pdf_file_path, page_number)
-    print(ascii_art)
