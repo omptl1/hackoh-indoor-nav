@@ -22,17 +22,23 @@ def convert_input_txt(filename):
     
 # Takes in a current point, and it returns a list of triples, (successor, action, stepCost)
 def getSuccessors(self, inputArray):
-    """
-        state: Search state
+    successors = []
+    if inputArray[self[0] + 1][self[1]] == 'space' or inputArray[self[0] + 1][self[1]] == 'goal':
+        successors.append(((self[0] + 1, self[1]), 's', 1))
 
-        For a given state, this should return a list of triples,
-        (successor, action, stepCost), where 'successor' is a
-        successor to the current state, 'action' is the action
-        required to get there, and 'stepCost' is the incremental
-        cost of expanding to that successor
-        """
-    util.raiseNotDefined()
-   
+    if inputArray[self[0]] > 0:
+        if inputArray[self[0] - 1][self[1]] == 'space' or inputArray[self[0] - 1][self[1]] == 'goal':
+            successors.append(((self[0] - 1, self[1]), 'n', 1))
+    
+    if inputArray[self[0]][self[1] + 1] == 'space' or inputArray[self[0]][self[1] + 1] == 'goal':
+        successors.append(((self[0], self[1] + 1), 'e', 1))
+
+    if inputArray[self[1]] > 0:
+        if inputArray[self[0]][self[1] - 1] == 'space' or inputArray[self[0]][self[1] - 1] == 'goal':
+            successors.append(((self[0], self[1] - 1), 'w', 1))
+
+    return successors
+        
 # Determines the start state and returns the triple
 def getStartState(inputArray):
     inputArray
