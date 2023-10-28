@@ -9,7 +9,7 @@ def pdf_to_jpeg(pdf_path, output_folder):
         image.save(f"{output_folder}/page_{i + 1}.jpg", "JPEG")
 
 # Replace these with your PDF file path and output folder
-pdf_file = "your_file.pdf"
-output_folder = "output_images"
+pdf_file = "floor_plans/floor2.pdf.pdf"
+output_folder = "floor_plans"
 
 pdf_to_jpeg(pdf_file, output_folder)
