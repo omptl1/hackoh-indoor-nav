@@ -1,11 +1,3 @@
-Imput description:
-A text file containing 4 types of characters:
-- %: Wall
--  : Accessible space
-- P: Start
-- .: Goal
-
-Example:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                 P%
 % %%%%%%%%      %%%%%%%%% %%%%%%%% %
