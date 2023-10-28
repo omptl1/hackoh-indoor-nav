@@ -19,7 +19,7 @@ def convert_input_text(filename):
                     row.append(char_to_type[char])
                 else:
                     # Handle unknown characters (optional)
-                    row.append('unknown')
+                    row.append('?')
             grid.append(row)
 
     return grid
@@ -47,9 +47,25 @@ def getStartState(inputArray):
     return []
     
 # Determines the heuristic value of the current point from the goal state
-def heuristic(inputArray):
+def heuristic(inputPoint, inputArray):
     """
     A heuristic function estimates the cost from the current state to the nearest
-    goal in the provided SearchProblem.  This heuristic is trivial.
+    goal in the provided SearchProblem. This heuristic uses Manhattan distance.
     """
-    return 0
+
+    # Extract the current point from the input array
+    current_point = inputPoint
+
+    # Find the goal point in the input array
+    goal_point = None
+    for element in inputArray:
+        if element[2] == 'goal':
+            goal_point = element[:2]
+            break
+
+    # If no goal point was found, raise an error
+    if goal_point is None:
+        raise ValueError("No goal point found in inputArray")
+
+    # Calculate the Manhattan distance between the current point and the goal point
+    return abs(current_point[0] - goal_point[0]) + abs(current_point[1] - goal_point[1])
