@@ -44,5 +44,6 @@ parsed_directions = parse_directions_from_file(file_path)
 print(parsed_directions)
 
 language = 'en'
-myobj = gTTS(text=parsed_directions, lang=language, slow=False)
+voice = 'comical'  # You need to check available voices in the gTTS library for a funny voice
+myobj = gTTS(text=parsed_directions, lang=language, tld= 'com.au', slow=False)
 myobj.save("dir.mp3")
