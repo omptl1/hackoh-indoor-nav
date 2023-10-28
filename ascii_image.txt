@@ -1,125 +1,58 @@
                                                                                                     
+      oooooooooooooooooooooooooooooo     oooooooooooooooooooooooooooooooooooooooo                   
+      oooooooooooooooooooooooooooooo     oooooooooooooooooooooooooooooooooooooooo                   
+      o                   oo  oo  oo                   o                        o                   
+      o                       oo                       o                        o                   
+      o                       oo                       o                        o                   
+      o                       oo                       o                        o                   
+      o                       oo                       o                        o                   
+      o                       oo                       o                        o                   
+      o                       oo                       o                        o                   
+      o                       oo                       o                        o                   
+      o                       oo                       o                        o                   
+                              oo                       o                        o                   
+                           o  oo                       o            o           o                   
+                          oo  oo  oo                   o                        o                   
+                          oooooooooo                   o                        o                   
+                                                       o                        o                   
+                                                       o                        o                   
+                                                       o                        o                   
+                                                       o                                            
+      o                   oo      oo                   o                                            
+      oooooooooooooooooooooo    oooooooooooooooooooooooo                                            
+      o              oo   oo    oo                                                                  
+      o              oo   oo    oo                                                                  
+      o              oo   oo    oo                                              o                   
+      o                   oo    oo                       oo     oooooooooooo    o                   
+      o                         oo                  oo   oo     oooooooooooo    o                   
+      o                         oo                  oo   o            o         o                   
+      o                         ooooooo             o    oo           o         o                   
+      o                   oo    ooooooooooooooooooooooooooo           o         o                   
+      oooooooooooooooooooooo     ooooooooooooooooooooooooo            o         o                   
+             o                                                        o         o                   
+                                                                      o         o                   
+                                                                      o         o                   
+                                                                      o         o                   
+                                                                oo   oo         o                   
+                                                                 oooooooooooooooo                   
+             o                                                                  o                   
+             o                                                                  o                   
+             o                                                                                      
+             o                                                                                      
+             o                                                                                      
+             o                                                                                      
                                                                                                     
                                                                                                     
                                                                                                     
                                                                                                     
-     o                                                                                              
-       oo                                                                                           
-                                                                                                    
-                                                                         ooo  ooooooooooooooooo     
-                                                                                 ooooooooooooo      
-                                                                                    o               
-                                                                                                    
-                                                                                                    
-                                                                                                    
-     o     o                                                                                        
-     o ooo  ooo                                                                                     
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                  ooooo            ooooooo  ooooooooooooo      ooooooooooo    oooo                  
-                ooo   o  ooooooooooooo                                          oo                  
-                o       oooo                                                    o                   
-                o                                                               oo                  
-                o                                                               oo                  
-                o                                                                o                  
-                o                                                                o                  
-                o                                                                o                  
-               oo                                                                o                  
-               ooo                                        ooo                    oo                 
-                oo                                       oooooooooo              oo                 
-                                                        o        oo  oooooo       o                 
-                                                       oo         ooooo  oo       o                 
-               oo                                     oo                  o       o                 
-               oo                                    oo                   o       oo                
-               oo                                   oo                    o       oo   o            
-               oo                                  oo                     o        o   o            
-               oo                                  o                      oo           o            
-               ooo                                o                        o           o            
-                oo                               o                         o           oo           
-                                                oo                         o           oo           
-                                               oo                          o            o           
-                                              oo                           oo           o           
-                                             oo                            oo           o           
-                o                           oo                              o           oo          
-                o                           o                               o        o              
-                o                          o                                oooo                    
-                o                          o                                oo                      
-                o                                                                                   
-                o                                                                                   
-                o                                                                                   
-                o                                                                                   
-                o                      oo                                                           
-                o                      o                                                            
-                o                      o                                                            
-                oo                     o                                                            
-                 ooo                   o                                                            
-                   ooo                 o                                                            
-                     ooo               o                                                            
-                       ooo            oo                                                            
-                         ooo          o                                                             
-                           ooo        o                                                             
-                             o        o                                                             
-                             o        o                                                             
-                             o        o                                                             
-                             o        oo                                                            
-                             oo       oo                                                            
-                             oo        o                                                            
-                             oo        o                                                            
-                             oo        o                                                            
-                              o        o                                                            
-                              o        o                                                            
-                              o        o                                                            
-                              o        o                                                            
-                              o        o                                                            
-                              o        oo                                                           
-                             oo         oo                                                          
-                             o           oo                                                         
-                            oo            oo                                                        
-                            o              oo                                                       
-                           o                oo                                                      
-                          oo                 oo                                                     
-                          o                   oo                                                    
-                         o                     oo                                                   
-                        oo                      oo                                                  
-                        o                        oo                                                 
-                       oo                        oo                                                 
-                      oo                          oo                                                
-                      o                            oo                                               
-           oooooooooooo                             oo                                              
-          oo                                         oo                                             
-          oo                                         oo                                             
-           o                                          o                                             
-           o                                          o                                             
-           o                                          o                                             
-           o                                          oo                                            
-           o                                           o                                            
-           o                                           o                                            
-           o                                           o                                            
-           o                                           oo                                           
-           o             o                             oo                                           
-           o                                            o                                           
-           o                                            o                                           
-           o                                            o                                           
-           o                                            oo                                          
-           o                                             o                                          
-           o                                             o                                          
-           o                                        oooooo                                          
-           oo                                   oooooo                                              
-           oo                              oooooo                                                   
-           oo   oooooooooooooooo      ooooooo                                                       
-            ooooooooooo        o  oooooo                                                            
-                               oooo                                                                 
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                     ooooooo        ooooooo         
+                                                                                oo                  
+                                                                                ooooooooooooo       
+                                                                                o                   
+                                          o     o          o                    o                   
+             o                            o     o          o                    o                   
+             o                            o     o          o                    o                   
+             o                            o     o          o                    o                   
+             oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo                   
                                                                                                     
                                                                                                     
                                                                                                     
