@@ -31,14 +31,14 @@ def getSuccessors(self, inputArray):
     if inputArray[self[0] + 1][self[1]] == 'space' or inputArray[self[0] + 1][self[1]] == 'goal':
         successors.append(((self[0] + 1, self[1]), 's', 1))
 
-    if inputArray[self[0]] > 0:
+    if self[0] > 0:
         if inputArray[self[0] - 1][self[1]] == 'space' or inputArray[self[0] - 1][self[1]] == 'goal':
             successors.append(((self[0] - 1, self[1]), 'n', 1))
     
     if inputArray[self[0]][self[1] + 1] == 'space' or inputArray[self[0]][self[1] + 1] == 'goal':
         successors.append(((self[0], self[1] + 1), 'e', 1))
 
-    if inputArray[self[1]] > 0:
+    if self[1] > 0:
         if inputArray[self[0]][self[1] - 1] == 'space' or inputArray[self[0]][self[1] - 1] == 'goal':
             successors.append(((self[0], self[1] - 1), 'w', 1))
 
