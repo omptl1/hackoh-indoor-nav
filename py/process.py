@@ -1,23 +1,28 @@
-# Takes an input txt file and converts it to this form: (x, y, type)
-def convert_input_txt(filename):
+# Takes an input txt file and converts it to this form: [['start', 'wall'], ['space', 'goal']]
+def convert_input_text(filename):
     # Define mapping of characters to types
     char_to_type = {
-        '|': 'wall',
+        'o': 'wall',
         ' ': 'space',
-        '.': 'goal',
-        'P': 'start'
+        'G': 'goal',
+        '*': 'start'
     }
 
-    # Initialize variables to store the result
-    result = []
+    # Initialize the 2D array
+    grid = []
 
     with open(filename, 'r') as file:
-        for y, line in enumerate(file):
-            for x, char in enumerate(line.strip()):
+        for line in file:
+            row = []
+            for char in line.strip():
                 if char in char_to_type:
-                    result.append((x, y, char_to_type[char]))
+                    row.append(char_to_type[char])
+                else:
+                    # Handle unknown characters (optional)
+                    row.append('unknown')
+            grid.append(row)
 
-    return result
+    return grid
     
     
 # Takes in a current point, and it returns a list of triples, (successor, action, stepCost)
@@ -35,7 +40,11 @@ def getSuccessors(self, inputArray):
    
 # Determines the start state and returns the triple
 def getStartState(inputArray):
-    inputArray
+    for element in inputArray:
+        if element[2] == 'start':
+            return element
+        
+    return []
     
 # Determines the heuristic value of the current point from the goal state
 def heuristic(inputArray):

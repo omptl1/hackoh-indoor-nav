@@ -1,20 +1,18 @@
-|||||||||||||||||||||||||||||||||||||
-|||||||||||||||||||||||||||||||||||||
-||                                P||
-|| ||||||||      |||||||| |||||||  ||
-|| ||   |   |      ||||||   ||     ||
-|| || | | | | |||| |||||||| || ||||||
-|| || | | | |             || ||    ||
-|| || | | | | | ||||  |||    ||||| ||
-|| |  | | |   |    || |||||||      ||
-|| || | | ||||||| ||        || ||||||
-|| ||   ||       ||||||||| ||      ||
-||    ||||| |||||||      || |||||  ||
-|||||||      |       |||| ||       ||
-||      ||||| |||||| |    || ||||||||
-|| ||||||      |       ||||| ||    ||
-||        ||||| ||||||||||| ||  || ||
-|||||||||||                  ||||| ||
-||.         ||||||||||||||         ||
-|||||||||||||||||||||||||||||||||||||
-|||||||||||||||||||||||||||||||||||||
+ooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooo
+oo                               *ooo
+oo ooooooo      ooooooo oooooo  ooooo
+oo oo   o   o      oooo   oo     oooo
+oo oo o o o ooooo ooooooo oo oooooooo
+oo oo o o o             oo oo      oo
+oo oo o o o o ooooo  ooo    ooooo  oo
+oo  o o o   o    oo oooooooo      ooo
+oo oo o oooooooo oo        oo ooooooo
+oo oo   oo       oooooooo oo     o oo
+oo    ooooo ooooo      oo oooooo   oo
+oooooooo      o       ooo oo       oo
+oo      ooooo ooooo o    oo oo     oo
+ooooooooo                  oooo    oo
+ooG         oooooooooo         o  Goo
+ooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooo
