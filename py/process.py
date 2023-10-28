@@ -35,7 +35,7 @@ def getSuccessors(self, inputArray):
    
 # Determines the start state and returns the triple
 def getStartState(inputArray):
-    
+    inputArray
     
 # Determines the heuristic value of the current point from the goal state
 def heuristic(inputArray):
