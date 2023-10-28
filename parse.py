@@ -1,9 +1,7 @@
-from gtts import gTTS 
-import os 
+from gtts import gTTS
+import os
 
-
-
-def parse_directions(abbreviated_directions):
+def parse_directions_from_file(file_path):
     direction_mapping = {
         'n': 'north',
         's': 'south',
@@ -15,33 +13,36 @@ def parse_directions(abbreviated_directions):
     stride_count = 0
     directions = []
 
+    with open(file_path, 'r') as file:
+        abbreviated_directions = file.read().replace('\n', '')  # Remove newline characters
+
     for direction in abbreviated_directions:
-        if current_direction != direction:
-            if current_direction and stride_count > 0:
-                if stride_count == 1:
-                    directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} stride.\n")
-                else:
-                    directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} strides.\n")
-            current_direction = direction
-            stride_count = 1
-        else:
-            stride_count += 1
+        if direction in direction_mapping:  # Add this check to ignore invalid characters
+            if current_direction != direction:
+                if current_direction and stride_count > 0:
+                    if stride_count == 1:
+                        directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} stride.\n")
+                    else:
+                        directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} strides.\n")
+                current_direction = direction
+                stride_count = 1
+            else:
+                stride_count += 1
 
     if current_direction and stride_count > 0:
         if stride_count == 1:
             directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} stride.\n")
         else:
             directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} strides.\n")
-            
+
     directions.append("You have reached your destination.")
 
     return ''.join(directions)
 
-abbreviated_directions = "nnnnssssew"
-parsed_directions = parse_directions(abbreviated_directions)
+file_path = 'example_maze_output.txt'
+parsed_directions = parse_directions_from_file(file_path)
 print(parsed_directions)
 
-
 language = 'en'
-myobj = gTTS(text=parsed_directions, lang=language, slow=False) 
+myobj = gTTS(text=parsed_directions, lang=language, slow=False)
 myobj.save("dir.mp3")
