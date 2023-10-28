@@ -21,19 +21,20 @@ def aStarSearch(inputArray):
         beginPath = [successor[1]]
         successorComplete = (successor, beginPath)
         h_value = process.heuristic(successor[0], inputArray)
-        heapq.heappush(optionNodes, [successorComplete, process.getCostOfActions(beginPath) + h_value])
+        heapq.heappush(optionNodes, [successorComplete, len(beginPath) + 1 + h_value])
 
     currentNode, path = startNode, []
 
     # Searches until there are not options left
-    while not foundGoal and optionNodes.count > 0:
+    while not foundGoal and len(optionNodes) > 0:
         # Gets current node to look at (node with shortest path length)
-        currentNode, path = heapq.heappop(optionNodes)
+        poppedNode = heapq.heappop(optionNodes)
+        currentNode, path = poppedNode[0][0], poppedNode[0][1]
 
         # Checks whether the current node has not been used
         if not currentNode[0] in usedNodes:
             # Checks whether goal has been found
-            if process.isGoalState(currentNode[0]):
+            if process.isGoalState(currentNode[0], inputArray):
                 foundGoal = True
 
             else:
@@ -44,7 +45,7 @@ def aStarSearch(inputArray):
                     if not successor[0] in usedNodes:
                         # Adds nodes and their paths, with the cost as the priority queue determiner
                         newPath = path + [successor[1]]
-                        nextCost = process.getCostOfActions(newPath)
+                        nextCost = len(newPath) + 1
                         successorComplete = (successor, newPath)
                         h_value = process.heuristic(successor[0], inputArray)
                         heapq.heappush(optionNodes, [successorComplete, nextCost + h_value])
