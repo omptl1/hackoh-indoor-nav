@@ -1,20 +1,6 @@
-# search.py
-# ---------
-# Licensing Information: Please do not distribute or publish solutions to this
-# project. You are free to use and extend these projects for educational
-# purposes. The Pacman AI projects were developed at UC Berkeley, primarily by
-# John DeNero (denero@cs.berkeley.edu) and Dan Klein (klein@cs.berkeley.edu).
-# For more info, see http://inst.eecs.berkeley.edu/~cs188/sp09/pacman.html
-
-"""
-In search.py, you will implement generic search algorithms which are called
-by Pacman agents (in searchAgents.py).
-"""
+# Successor looks like this: [[0, 1, 'start'], 'n']
 
 from collections import deque
-import queue
-import util
-from util import heappush, heappop
 import process
 
 # Travels 
@@ -25,7 +11,7 @@ def aStarSearch(inputArray):
 
     # Adds start to used nodes list
     usedNodes = [startNode]
-
+    
     # Successor nodes that are discovered but not yet visited
     optionNodes = util.PriorityQueue()
     successors = process.getSuccessors(startNode)
