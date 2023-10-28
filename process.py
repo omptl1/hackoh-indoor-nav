@@ -46,10 +46,14 @@ def getSuccessors(self, inputArray):
         
 # Determines the start state and returns the triple
 def getStartState(inputArray):
+    rowCount = 0
     for row in inputArray:
+        columnCount = 0
         for element in row:
             if element == 'start':
-                return element
+                return (rowCount, columnCount)
+            columnCount += 1
+        rowCount += 1
         
     return []
     
