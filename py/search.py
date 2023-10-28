@@ -18,7 +18,7 @@ from util import heappush, heappop
 import process
 
 # Travels 
-def aStarSearch():
+def aStarSearch(inputArray):
     # Start node
     startNode = process.getStartState()
     foundGoal = False
