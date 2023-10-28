@@ -1,5 +1,5 @@
 # Takes an input txt file and converts it to this form: [['start', 'wall'], ['space', 'goal']]
-def convert_input_text(filename):
+def convertInputText(filename):
     # Define mapping of characters to types
     char_to_type = {
         'o': 'wall',
@@ -56,6 +56,13 @@ def getStartState(inputArray):
         rowCount += 1
         
     return []
+
+# Checks whether the current state is the goal state
+def isGoalState(self, inputArray):
+    if inputArray[self[0]][self[1]] == 'goal':
+        return True
+    else:
+        return False
     
 # Determines the heuristic value of the current point from the goal state
 def heuristic(inputPoint, inputArray):
@@ -69,10 +76,16 @@ def heuristic(inputPoint, inputArray):
 
     # Find the goal point in the input array
     goal_point = None
-    for element in inputArray:
-        if element[2] == 'goal':
-            goal_point = element[:2]
-            break
+    
+    rowCount = 0
+    for row in inputArray:
+        columnCount = 0
+        for element in row:
+            if element == 'start':
+                goal_point = (rowCount, columnCount)
+                break
+            columnCount += 1
+        rowCount += 1
 
     # If no goal point was found, raise an error
     if goal_point is None:
@@ -80,3 +93,11 @@ def heuristic(inputPoint, inputArray):
 
     # Calculate the Manhattan distance between the current point and the goal point
     return abs(current_point[0] - goal_point[0]) + abs(current_point[1] - goal_point[1])
+
+def outputDirections(directions, filename):
+    # Combine the characters into a single string
+    combined_string = ''.join(directions)
+
+    # Write the combined string to a file
+    with open(filename, 'w') as file:
+        file.write(combined_string)
