@@ -26,7 +26,7 @@ def parse_directions_from_file(file_path):
         if direction in direction_mapping:  # Add this check to ignore invalid characters
             #if new direction
             if current_direction != direction:
-                directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} strides.\n")
+                directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count*3} feet.\n")
                 current_direction = direction
                 #reset direction step count
                 stride_count = 1
@@ -36,9 +36,9 @@ def parse_directions_from_file(file_path):
 
     if current_direction and stride_count > 0:
         if stride_count == 1:
-            directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} stride.\n")
+            directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count*3} feet.\n")
         else:
-            directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} strides.\n")
+            directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count*3} feet.\n")
 
     directions.append("You have reached your destination.")
 
