@@ -10,24 +10,29 @@ def parse_directions_from_file(file_path):
     }
 
     current_direction = None
-    stride_count = 0
+    stride_count = 1
     directions = []
 
     with open(file_path, 'r') as file:
         abbreviated_directions = file.read().replace('\n', '')  # Remove newline characters
 
+    count = 0
+
     for direction in abbreviated_directions:
+
+        if count == 0:
+            current_direction = direction
+
         if direction in direction_mapping:  # Add this check to ignore invalid characters
+            #if new direction
             if current_direction != direction:
-                if current_direction and stride_count > 0:
-                    if stride_count == 1:
-                        directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} stride.\n")
-                    else:
-                        directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} strides.\n")
+                directions.append(f"Face {direction_mapping[current_direction]}. Go straight for {stride_count} strides.\n")
                 current_direction = direction
+                #reset direction step count
                 stride_count = 1
             else:
                 stride_count += 1
+        count +=1
 
     if current_direction and stride_count > 0:
         if stride_count == 1:
@@ -44,5 +49,6 @@ parsed_directions = parse_directions_from_file(file_path)
 print(parsed_directions)
 
 language = 'en'
-myobj = gTTS(text=parsed_directions, lang=language, slow=False)
+voice = 'comical'  # You need to check available voices in the gTTS library for a funny voice
+myobj = gTTS(text=parsed_directions, lang=language, tld= 'com.au', slow=False)
 myobj.save("dir.mp3")
