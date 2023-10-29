@@ -2,6 +2,11 @@ import process, search, parse
 
 # Gets the input array of coordinates and type
 inputArray = process.convertInputText('example_maze_input.txt')
+with open('wordOut', 'w') as file:
+        for row in inputArray:
+            file.write(str(row) + '\n')
+
+inputArray = process.surround_image(inputArray)
 
 # Returns the output string of directions
 outputArray = search.aStarSearch(inputArray)
