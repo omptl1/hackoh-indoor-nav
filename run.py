@@ -6,6 +6,8 @@ with open('wordOut', 'w') as file:
         for row in inputArray:
             file.write(str(row) + '\n')
 
+inputArray = process.surround_image(inputArray)
+
 # Returns the output string of directions
 outputArray = search.aStarSearch(inputArray)
 
