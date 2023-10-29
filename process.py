@@ -101,3 +101,25 @@ def outputDirections(directions, filename):
     # Write the combined string to a file
     with open(filename, 'w') as file:
         file.write(combined_string)
+        
+def surround_image(inputArray):
+    maxHorizontal = 0
+    
+    for row in inputArray:
+        if len(row) > maxHorizontal:
+            maxHorizontal = len(row)
+            
+    newRow = []
+    for i in 1..maxHorizontal:
+        newRow.insert('o')
+        
+    inputArray.insert(0, newRow)
+    
+    for row in inputArray:
+        row.insert(0, 'o')
+        row.insert(len(row), 'o')
+        
+    inputArray.insert(0, newRow)
+    
+    return inputArray
+        
